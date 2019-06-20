@@ -1,0 +1,18 @@
+
+@for $level from 1 through 5 {
+  .type-h#{$level} {
+    line-height: 1.25;
+  }
+}
+
+.type-h1 {
+  @include fontScale(34, 40);
+}
+
+.type-h2 {
+  @include fontScale(30, 34);
+}
+
+.type-h3 {
+  @include fontScale(28, 32);
+}
