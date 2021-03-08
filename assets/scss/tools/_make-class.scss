@@ -1,7 +1,0 @@
-@mixin make-class($selector, $properties, $value) {
-  #{$selector} {
-    @each $property in $properties {
-      #{$property}: #{$value};
-    }
-  }
-}
