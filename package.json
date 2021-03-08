@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "postinstall": "git clone https://github.com/wearelighthouse/stemCSS.git assets/scss"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

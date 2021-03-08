@@ -3,12 +3,11 @@
  * Similar to WordPress .screen-reader-text:
  * https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
  */
-.o-dicate {
-  @extend %u-ov-hidden;
+.o-dictate {
   @extend %u-pos-absolute;
   @extend %u-width-1px;
   @extend %u-height-1px;
-  @extend %u-clip-1px;
+  clip-path: inset(50%);
   margin: -1px;
   padding: 0;
   border: 0;
