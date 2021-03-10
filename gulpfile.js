@@ -2,6 +2,8 @@ const browserSync = require('browser-sync').create();
 const del = require("del");
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const purgeCSS = require("gulp-purgecss");
+const cleanCSS = require("gulp-clean-css");
 
 var paths = {
   styles: {
@@ -38,6 +40,8 @@ function scss() {
     .src([paths.styles.src])
     .pipe(sass({includePaths: ['./node_modules']})
     .on("error", sass.logError))
+    .pipe(purgeCSS({ content: ['*.html'] }))
+    .pipe(cleanCSS())
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.reload({ stream: true }));
 }
