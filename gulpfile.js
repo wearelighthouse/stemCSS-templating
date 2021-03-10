@@ -32,7 +32,7 @@ function browserSyncInit(cb) {
 
 function watch(cb) {
   gulp.watch(paths.styles.src, scss);
-  gulp.watch(paths.html).on('change', browserSync.reload);
+  gulp.watch(paths.html).on('change', gulp.series(scss, browserSync.reload));
 }
 
 function scss() {
