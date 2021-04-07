@@ -25,7 +25,6 @@ function clean(cb) {
 function browserSyncInit(cb) {
   browserSync.init({
     server: true
-    //proxy: 'localhost'
   });
   cb();
 }
