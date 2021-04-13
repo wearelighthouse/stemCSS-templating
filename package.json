@@ -12,7 +12,7 @@
     "build": "gulp",
     "watch": "gulp watch",
     "postinstall": "git clone https://github.com/wearelighthouse/stemCSS.git assets/scss",
-    "lint:style": "npx stylelint '**/*.scss'"
+    "stylelint": "npx stylelint '**/*.scss'"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
